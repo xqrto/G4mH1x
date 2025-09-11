@@ -1,0 +1,32 @@
+I make small scripts and make it a point not to harm any user of my apps, 
+so please note that scripts from me (they all start with x) XD 
+should only be downloaded from the github here, otherwise they could possibly be viruses. 
+Thank you. 
+
+Here is something else for creators:
+
+
+This license governs the use of all software, scripts, and applications contained in this repository.
+
+Terms of Use:
+
+Personal Use:
+All apps and scripts in this repository may be used freely for personal purposes or internal projects.
+
+Integration into Projects:
+
+Only the apps and scripts located in the WtC folder may be integrated into other projects or external code.
+
+Integration is permitted only if the author’s name or a link to this repository is clearly visible in the project (e.g., in the GUI within two clicks from start or in the project ReadMe).
+
+Prohibited Use:
+
+Apps or scripts outside the WtC folder may not be used in other projects or redistributed.
+
+Any use without proper attribution as described in Section 2 is forbidden.
+
+Liability:
+The author assumes no liability for any damages arising from the use of the software.
+
+Modifications and Redistribution:
+Modifications are allowed only under compliance with this license, and redistribution must retain all required credits.

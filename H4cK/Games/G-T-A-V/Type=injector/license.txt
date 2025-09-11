@@ -1,0 +1,32 @@
+1. License Grant
+
+You are granted a non-exclusive, non-transferable license to use the xylo.exe software and any XYLO-based applications (including but not limited to XYLO Launcher, GTA-V inject, and related apps) solely for personal or internal purposes.
+
+2. Usage Requirements
+
+You may include xylo.exe in your own applications only if you provide proper credit to the XYLO project.
+
+Credit must be clearly visible in your application documentation, about page, or startup screen:
+"Powered by xqrto".
+
+3. Restrictions
+
+You may not:
+
+Sell or distribute xylo.exe or XYLO-based apps as your own product without explicit permission.
+
+Remove or alter the XYLO copyright, credits, or license information.
+
+Use XYLO software for malicious, harmful, or illegal purposes.
+
+4. Disclaimer
+
+xylo.exe and XYLO-based applications are provided as-is. The authors disclaim all warranties, express or implied, including but not limited to fitness for a particular purpose or non-infringement. Use at your own risk.
+
+5. Liability
+
+The authors are not liable for any damages, direct or indirect, arising from the use or inability to use XYLO software.
+
+6. Termination
+
+This license is effective until terminated. Your rights under this license terminate automatically if you fail to comply with any of its terms. Upon termination, you must stop using and remove all XYLO software from your applications.
