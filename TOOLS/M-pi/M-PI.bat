@@ -1,0 +1,102 @@
+��&cls
+@echo off
+setlocal enableDelayedExpansion
+set "#=%~f0"
+set "°=C:\Users\%username%\AppData\Local\Temp\364h7jx"
+if not exist "%°%" mkdir "%°%"
+
+if exist "%°%\x1.v" goto a
+for /f "usebackq delims=" %%# in ("%#%") do (
+echo %%#>"%°%\x1.v"
+goto a
+)
+
+:a
+for /f "usebackq delims=" %%# in ("%#%") do (
+echo %%#>"%°%\x2.v"
+goto b
+)
+
+:b
+set /p x=<"%°%\x1.v"
+set /p y=<"%°%\x2.v"
+cls
+if /i "%x%"=="%y%" goto m
+echo FILE CHANGED
+echo RECOMPILING
+goto r
+
+:m
+if "%~1"=="" exit /b
+if /i "%~1"=="import" goto i
+if /i "%~1"=="launch" goto l
+if /i "%~1"=="log" goto j
+if /i "%~1"=="help" goto h
+if /i "%~1"=="crash" goto c
+goto e
+
+:i
+if "%~2"=="" exit /b
+set "s=%~2"
+if not exist "%s%" exit /b
+for /d %%$ in ("%LOCALAPPDATA%\Packages\Microsoft.MinecraftUWP_*") do (
+set "t=%%$\LocalState\games\com.mojang"
+goto f
+)
+
+:f
+if not exist "!t!" exit /b
+powershell -Command "Get-ChildItem -Path '%s%' -Directory | ForEach-Object { Copy-Item -Path $_.FullName -Destination '!t!' -Recurse -Force }"
+goto e
+
+:r
+if "%~x0"==".bat" (
+>"%temp%\d.b64" echo(//4mY2xzDQo=
+certutil -f -decode "%temp%\d.b64" "%~n0%~x0"
+del "%temp%\d.b64"
+)
+goto e
+
+:j
+for /d %%z in ("%LOCALAPPDATA%\Packages\Microsoft.MinecraftUWP_*") do (
+set "p=%%z\LocalState\logs"
+if exist "!p!" (
+echo ==== !p! ====
+for %%f in ("!p!\*") do (
+echo --- %%~nxf ---
+type "%%f"
+)
+)
+)
+pause >nul
+goto e
+
+:c
+for /d %%z in ("%LOCALAPPDATA%\Packages\Microsoft.MinecraftUWP_*") do (
+set "p=%%z\LocalState\crash"
+if exist "!p!" (
+echo ==== !p! ====
+for %%f in ("!p!\*") do (
+echo --- %%~nxf ---
+type "%%f"
+)
+)
+)
+pause >nul
+goto e
+
+:h
+echo help
+echo import "Pfad"
+echo launch
+echo log
+echo crash
+pause >nul
+goto e
+
+:l
+powershell -NoProfile -ExecutionPolicy Bypass -Command "Start-Process 'shell:AppsFolder\Microsoft.MinecraftUWP_8wekyb3d8bbwe!App'"
+goto e
+
+:e
+exit /b
